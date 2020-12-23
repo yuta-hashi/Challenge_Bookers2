@@ -19,17 +19,25 @@
         </a>
         <div class="navbar-collapse collapse show" id="navbarNavDropdown" style>
           <ul class="navbar-nav ml-auto">
-            <li>
-              <a class="fas fa-home nav-link text-light" href="/">Home</a>
-            </li>
-
             <% if user_signed_in? %>
             <li>
-              <a class="fas fa-home nav-link text-light" href="/">Users</a>
+              <a class="fas fa-home nav-link text-light">
+                <%= link_to "Home", user_path(current_user.id) %>
+              </a>
             </li>
+
             <li>
-              <a class="fas fa-home nav-link text-light" href="/">Books</a>
+              <a class="fas fa-home nav-link text-light">
+                <%= link_to "Users", users_path %>
+              </a>
             </li>
+
+            <li>
+              <a class="fas fa-home nav-link text-light">
+                <%= link_to "Books", books_path %>
+              </a>
+            </li>
+
             <li>
               <a class="fas fa-home nav-link text-light" href="/">
                 <%= link_to "logout", destroy_user_session_path, method: :delete %>
@@ -37,13 +45,21 @@
             </li>
             <% else %>
             <li>
-              <a class="fas fa-home nav-link text-light" href="/">About</a>
+              <a class="fas fa-home nav-link text-light" href="/">Home</a>
             </li>
+
+            <li>
+              <a class="fas fa-home nav-link text-light">
+                <%= link_to "About", about_path %>
+              </a>
+            </li>
+
             <li>
               <a class="fas fa-home nav-link text-light" href="/">
                 <%= link_to "sign up", new_user_registration_path %>
               </a>
             </li>
+
             <li>
               <a class="fas fa-home nav-link text-light" href="/">
                 <%= link_to "login", new_user_session_path %>
