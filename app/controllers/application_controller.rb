@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
-
+Refile.secret_key = '6d82cbcf4231b9c7d0ce35a607e38e7599f92f512cc710ef36e163c8d224006a9a3abb6c09169c9facd08bab8df52de238265420529014cdac75637e4a483d83'
 
   protected
 
