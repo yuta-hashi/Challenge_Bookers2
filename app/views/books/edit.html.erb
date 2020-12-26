@@ -1,0 +1,21 @@
+<main>
+  <div>
+    <h1>Editing Book</h1>
+
+    <%= form_with model: @book, local: true do |f| %>
+    <div>
+      <label for="book_title">Title</label><br>
+      <%= f.text_field :book_title, id:"book_title" %>
+    </div>
+
+    <div>
+      <label for="book_opinion">Opinion</label><br>
+      <%= f.text_area :book_body, id:"book_opinion" %>
+    </div>
+
+    <div>
+      <%= f.submit 'Update Book' %>
+    </div>
+    <% end %>
+  </div>
+</main>
