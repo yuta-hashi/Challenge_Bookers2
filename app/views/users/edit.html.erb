@@ -1,21 +1,24 @@
-<h2>User info</h2>
-<%= form_with model: @user, local: true do |f| %>
-<div>
-  <label for="user_name">Name</label><br>
-  <%= f.text_field :username, id:"user_name" %>
-</div>
+<main>
+  <h2>User info</h2>
+  <%= render 'layouts/errors', user: @user %>
+  <%= form_with model: @user, local: true do |f| %>
+  <div>
+    <label for="user_name">Name</label><br>
+    <%= f.text_field :username, id:"user_name" %>
+  </div>
 
-<div>
-  <label for="user_image">Image</label><br>
-  <%= f.attachment_field :profile_image, id:"user_image" %>
-</div>
+  <div>
+    <label for="user_image">Image</label><br>
+    <%= f.attachment_field :profile_image, id:"user_image" %>
+  </div>
 
-<div>
-  <label for="user_name">Introducution</label><br>
-  <%= f.text_area :username, id:"user_name" %>
-</div>
+  <div>
+    <label for="user_name">Introducution</label><br>
+    <%= f.text_area :introducution_id, id:"user_introducution" %>
+  </div>
 
-<div>
-  <%= f.submit 'Update User' %>
-</div>
-<% end %>
+  <div>
+    <%= f.submit 'Update User' %>
+  </div>
+  <% end %>
+</main>

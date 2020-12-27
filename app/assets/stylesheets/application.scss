@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap"; //bootstrapの導入
+
+//レスポンシブ（768px以下）
+@media screen and (max-width:768px) {
+  li {
+    height: 40px;
+  }
+}
